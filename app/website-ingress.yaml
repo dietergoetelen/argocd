@@ -13,7 +13,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/app"
+        path: "/vue"
         backend:
           service:
             name: website-service

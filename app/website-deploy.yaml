@@ -15,14 +15,7 @@ spec:
         app: argocdrocks
     spec:
       containers:
-      - name: argocdrocks-nginy
-        image: nginx:alpine
+      - name: vue-argo
+        image: dgoetelen/vue-argo
         ports:
         - containerPort: 80
-        volumeMounts:
-        - name: website-cm-volume
-          mountPath: /usr/share/nginx/html
-      volumes:
-      - name: website-cm-volume 
-        configMap:
-          name: website-cm
