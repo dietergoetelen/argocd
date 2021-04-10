@@ -6,7 +6,7 @@ metadata:
     app: argocdrocks
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
-    # traefik.ingress.kubernetes.io/rewrite-target: /
+    traefik.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: "127.0.0.1.xip.io"
