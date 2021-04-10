@@ -16,6 +16,6 @@ spec:
         path: "/app"
         backend:
           service:
-            name: argocd-server
+            name: website-service
             port:
               number: 80
