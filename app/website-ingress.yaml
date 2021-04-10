@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: website-ingress
+  labels:
+    app: argocdrocks
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+    traefik.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: "vue.127.0.0.1.xip.io"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/app"
+        backend:
+          service:
+            name: argocd-server
+            port:
+              number: 80
